@@ -1,0 +1,14 @@
+* {
+    font-family: courier new;
+}
+h1 {
+    color: #1b74e4;
+}
+#button {
+   
+    background-color: aqua;
+}
+.but {
+    color: white;
+    background-color: black;
+}
