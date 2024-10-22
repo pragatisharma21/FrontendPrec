@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom MI Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="mi.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="menuLeft">
+        <div class="navbar__logo">
+          <img
+            class="navHomeIcon1"
+            src="Xiaomi_logo.png"
+            alt="xiomi"
+          />
+          <img class="navHomeIcon2" src="Xiaomi_logo.png" alt="" />
+        </div>
+        <ul class="navbar__links">
+          <li><a class="link" href="#">Store</a></li>
+          <li><a class="link" href="#">Phones</a></li>
+          <li><a class="link" href="#">Tablets</a></li>
+          <li><a class="link" href="#">TV & Smart Home</a></li>
+          <li><a class="link" href="#">Smart Watch & Audio</a></li>
+        </ul>
+      </div>
+      <div class="menuRight">
+        <ul class="navbar__links" style="gap: 20px">
+          <li><a class="link" href="#">Discover</a></li>
+          <li><a class="link" href="#">Support</a></li>
+          <li>
+            <a class="link" href="#">
+              <img
+                class="navIcons"
+                src="https://img.icons8.com/?size=100&id=132&format=png&color=000000"
+                alt=""
+              />
+            </a>
+          </li>
+          <li>
+            <a class="link" href="#">
+              <img
+                src="https://img.icons8.com/?size=100&id=bsZaYrh2dJcU&format=png&color=000000"
+                alt=""
+                class="navIcons"
+              />
+            </a>
+          </li>
+          <li>
+            <a class="link" href="#">
+              <img
+                src="https://img.icons8.com/?size=100&id=114064&format=png&color=000000"
+                alt=""
+                class="navIcons"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navbar__menu-toggle" id="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobileClose">
+        <img
+          src="https://img.icons8.com/?size=100&id=8112&format=png&color=ffffff"
+          alt=""
+        />
+      </div>
+      <ul class="mobile-menu__links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="mainContainer">
+      <div class="gridContainer" id="gridContainer"></div>
+      <div class="bannerImage">
+        <img
+          src="https://i03.appmifile.com/305_operator_in/16/09/2024/7a490ec96922082e7e31cdca20dd12d3.jpg?thumb=1&w=1680&f=webp&q=85"
+          alt=""
+        />
+      </div>
+      <div class="gridContainer" id="gridContainer2"></div>
+    </div>
+
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const closeButton = document.getElementsByClassName("mobileClose")[0];
+      const gridContainer = document.getElementById("gridContainer");
+      const gridContainer2 = document.getElementById("gridContainer2");
+
+      closeButton.addEventListener("click", function () {
+        mobileMenu.classList.toggle("open");
+      });
+
+      menuToggle.addEventListener("click", function () {
+        mobileMenu.classList.toggle("open");
+      });
+
+      for (let i = 0; i < 3; i++) {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+
+        card.innerHTML = `
+            <div class="product-info">
+                <div class="product-title">
+                <a href="https://www.mi.com/in/product/xiaomi-pad-6/">Xiaomi Pad 6</a>
+                </div>
+                <div class="product-tag">
+                <span>37% off</span>
+                </div>
+            </div>
+            <div class="product-image">
+                <div class="product-price">
+                <span>From </span><strong>₹24,999</strong><br /><del>₹39,999</del>
+                </div>
+                <img
+                src="//i03.appmifile.com/61_item_in/24/08/2023/89bec9fe6f28937438b4646f395bf4cb.jpg?thumb=1&amp;w=200&amp;q=85"
+                alt="Xiaomi Pad 6"
+                loading="lazy"
+                />
+            </div>
+        `;
+
+        gridContainer.appendChild(card);
+      }
+
+      for (let i = 0; i < 3; i++) {
+        const card = document.createElement("div");
+        card.className = "product-card";
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+
+        card.innerHTML = `
+            <div class="product-info">
+                <div class="product-title">
+                <a href="https://www.mi.com/in/product/xiaomi-pad-6/">Xiaomi Pad 6</a>
+                </div>
+                <div class="product-tag">
+                <span>37% off</span>
+                </div>
+            </div>
+            <div class="product-image">
+                <div class="product-price">
+                <span>From </span><strong>₹24,999</strong><br /><del>₹39,999</del>
+                </div>
+                <img
+                src=https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/charger.png
+                alt="Xiaomi Pad 6"
+                loading="lazy"
+                />
+            </div>
+        `;
+
+        gridContainer2.appendChild(card);
+      }
+    </script>
+  </body>
+</html>
