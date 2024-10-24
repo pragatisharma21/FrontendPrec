@@ -1,0 +1,19 @@
+.investor-container {
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.investor {
+    text-align: center;
+}
+.investor img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+.investor p {
+    margin: 8px 0;
+    font-size: 14px;
+}
