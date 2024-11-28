@@ -1,4 +1,4 @@
-var sweets = ["kova" , "gulabjamun" , "pragati" , "mysorepark", "badhsaw"]
+var sweets = ["kova" , "gulabjamun" , "new work" , "mysorepark", "badhsaw"]
 sweets.forEach(function(element, index, array){
     console.log(element)
     console.log(index)
