@@ -15,3 +15,14 @@
 //div.append(p)
 //div.classList.add("div")
 //document.querySelector('body').append(div)
+let btns = document.querySelectorAll("button")
+for( btn of btns){
+    btn.onclick = sayhello;
+}
+//btn.onclick = function(){
+    //alert("Hello!")
+//}
+function sayhello(){
+    alert("hello world")
+}
+
